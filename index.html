@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container"> 
+        <header class="app-header"> 
+            <div class="title">
+                <h1> To do List </h1>
+            </div>
+            <div class="logo-container" >
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+        <div class="dashboard" >
+            <div class="sidebar">
+                <button class="sidebar-item active" data-filter="All"><span>
+                    All Tasks
+                </span></button>
+                <button class="sidebar-item" data-filter="Active">
+                    <span>In Progress</span></button>
+                <button class="sidebar-item" data-filter="Completed"><span>Completed</span></button>
+            </div>
+            <div class="task-board">
+                 <div class="board-header">
+                      <h3  id="current-task">All List</h3>
+                      <div class="search-add">
+                            <div class="search-container">
+                                <i class="fas fa-search"></i>
+                                <input type="text"
+                                id="search-task"
+                                placeholder="Search tasks.....">  
+                            </div>
+                            <button class="new-task-btn" id="new-task-btn" >New Task</button>
+                      </div>   
+                 </div>
+                 <div class="add-hidden hidden " id="add-hidden">
+                    <input type="text" placeholder="what needs to be done?" class="taskInput" id="taskInput">
+                    <div class="cancel-add">
+                         <button class="btn-cancel" id="btn-cancel"> Cancel</button>
+                        <button class="btn-add-task" id="btn-add-task"  > Add Task</button>
+                    </div>
+                 </div>
+                 <div class="task-grid" id="task-grid">
+                 </div>
+            </div>
+
+            <!-- <div class="task-board">
+                <h1>Task Manager</h1>
+                <div class="input-container">   
+                    <input id="taskInput" type="text" placeholder="What needs to be done?"> <button onclick="addTask()">Add Task</button>
+                </div>
+    
+                <ul id="taskList">
+                </ul>
+                <hr />
+               
+                <div class="counter-container">
+                    <div id="task-counters">
+                        Completed: <span id="completed-counter">0</span> | Uncompleted:
+                        <span id="uncompleted-counter">0</span>
+                    </div>
+                </div>
+            </div> -->
+        </div>    
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
